@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+
+        body {
+
+            background-color: black;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        h1 {
+            color: white;
+        }
+
+        .parent-block {
+            display: flex;
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+
+<div class="parent-block">
+    <div class="text-block">
+
+
+        <h1>
+            successfully
+        </h1>
+        <div style="display: flex; align-items: center; justify-content: center">
+
+            </div>
+        <h1 id="countdown"> 5 </h1>
+
+        <script>
+        let count = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        const countdown = setInterval(() => {
+            countdownElement.textContent = count;
+            if (count === 0) {
+                clearInterval(countdown); // Останавливаем таймер, когда счетчик достигает 0
+                window.location.href = "{{ LINK_LOGIN }}";
+            }
+            count--; // Уменьшаем значение на 1
+        }, 1000); // Интервал в 1000 миллисекунд (1 секунда)
+    </script>
+
+    </div>
+
+</div>
+
+</body>
+</html>

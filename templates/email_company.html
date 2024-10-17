@@ -1,0 +1,106 @@
+    {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+
+        .header {
+            background-color: black;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 20px;
+
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+        h1 {
+            font-weight: 200;
+        }
+        h2 {
+            font-weight: 200;
+        }
+
+        .tag-a-block {
+            display: flex;
+
+        }
+
+        .button-tag-a {
+            background-color: black;
+            text-decoration: none;
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>You have successfully registered your company</h1>
+            <h2>  follow the link to confirm your registration </h2>
+        </div>
+        <div class="content">
+            <p>Hello {{ first_name }} {{ last_name }}</p>
+            
+                        <p>To confirm your account, follow the link below</p>
+            <div class="tag-a-block">
+            <a href="{{ code }}">{{ code }}</a>
+                </div>
+
+
+            <p>Your phone: {{ phone }}</p>
+            <p> You company: {{ name }}</p>
+            <p> You usdot: {{ usdot }}</p>
+            <p>Your home_terminal_address: {{ home_terminal_address }}</p>
+             <p>Your home_terminal_timezone: {{ home_terminal_timezone }}</p>
+              <p>company_address: {{ company_address }}</p>
+
+
+            <img src="/static/laptop.png" alt="Image 3" class="image">
+
+            
+          
+            <div class="tag-a-block">
+            <a href="{{ code }}" class="button-tag-a">Click to activate your company</a>
+                </div>
+            
+
+        </div>
+        <div class="footer">
+            &copy; {{ year }} ABC Inc. No rights reserved.
+        </div>
+    </div>
+</body>
+</html>

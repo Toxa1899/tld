@@ -1,0 +1,261 @@
+
+
+html, body {
+     background-image: url("/config/static/eldloginregister.png");
+
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*background-repeat: no-repeat;*/
+}
+
+
+
+.parent-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* 100% высоты окна браузера */
+}
+
+
+.block-input {
+    background: #171416;
+    width: 759px;
+    height: 744px;
+    border-radius: 40px;
+}
+
+.logo-block {
+
+    margin-top: 90px;
+}
+
+
+.input-field {
+    padding-bottom: 14px;
+    position: relative;
+}
+
+.input-field-register {
+    padding-bottom: 17px;
+    position: relative;
+
+
+
+}
+
+.text-authorize {
+    color: #6D6D6D;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    display: flex;
+    margin-left: 13.60%;
+
+
+
+
+}
+
+.text-authorize-register {
+    color: #6D6D6D;
+
+    font-size: 24px;
+    font-weight: 400;
+    /*line-height: 1.05px;*/
+    display: flex;
+    margin-left: 13.60%;
+    margin-bottom: -16px
+
+
+
+
+
+
+}
+
+
+
+.input-block {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #3E3D3E;
+    border-radius: 10px;
+    width: 573px;
+    height: 80px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+
+.input-block-register {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #3E3D3E;
+    border-radius: 10px;
+    width: 500px;
+    height: 78px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+
+}
+
+
+
+
+.form-block {
+    margin-top: 108px;
+}
+
+.login-button {
+    background-color: #DF4924;
+    width: 300px;
+    height: 70px;
+
+    border: none;
+    border-radius: 10px ;
+    color: #E7E7E7;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 21px;
+
+}
+
+.login-button-register {
+      background-color: #DF4924;
+    width: 440px;
+    height: 102px;
+
+    border: none;
+    border-radius: 10px ;
+    color: #E7E7E7;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 21px;
+
+
+}
+
+
+.forget {
+    color: #6D6D6D;
+
+font-size: 20px;
+font-weight: 400;
+line-height: 24.2px;
+text-align: left;
+
+}
+
+.right-have {
+    margin-left: 20px;
+    color: #E9ECEF;
+    font-weight: 300;
+}
+
+/*.svg-input {*/
+/*    padding-left: 40px; !* Оставляем место для иконки *!*/
+/*    background-image: url('/config/static/Icon.svg'); !* Путь к вашему SVG-файлу *!*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: 95% center; !* Позиция иконки *!*/
+/*    background-size: 19.69px 14px; !* Размер иконки *!*/
+
+
+/*}*/
+
+.svg-password {
+    position: absolute;
+    right: 17%;
+    top: 55%;
+}
+
+.svg-password-register {
+    position: absolute;
+    right: 17%;
+    top: 45%;
+}
+
+.block-input-register {
+    background: #171416;
+    width: 1321px;
+    height: 1407px;
+    border-radius: 40px;
+
+
+}
+
+.left-and-right {
+    display: flex;
+    margin-top: 200px;
+}
+
+.left-block {
+
+    height: auto;
+    width: 50%;
+}
+
+.right-block {
+
+     height: auto;
+    width: 50%;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0; /* Скрывает стандартный чекбокс */
+
+}
+
+.checkbox-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none; /* Отключает выделение текста при клике */
+    margin-right: 7%;
+    margin-top: 2%;
+
+}
+
+.checkbox-container label {
+    position: relative;
+    padding-left: 30px; /* Отступ для пользовательской чекбокс-метки */
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-container label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,0); /* Цвет фоновой области чекбокса */
+
+
+    border: 1px solid #3E3D3E; /* Цвет границы чекбокса */
+}
+
+.custom-checkbox:checked + label::before {
+    background-color: grey; /* Цвет заполненного чекбокса */
+    border: none;
+
+}
+
+.text-checkbox {
+    color: #6D6D6D;
+font-size: 20px;
+font-weight: 400;
+line-height: 24.2px;
+    display: flex;
+    margin-left: 20px;
+
+
+}

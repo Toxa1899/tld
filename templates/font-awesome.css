@@ -1,0 +1,30 @@
+body {
+            background-color: white;
+            margin: 0;
+            height: 100vh;
+
+        }
+
+        .block-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-block-info {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            height: 70%;
+            border-radius: 20px;
+
+        }
+
+
+        .text-message {
+            color: white;
+            font-size: 29px;
+        }
