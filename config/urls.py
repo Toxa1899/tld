@@ -26,6 +26,8 @@ urlpatterns = [
     path('api/v1/account/', include('applications.account.urls')),
     path('api/v1/company/', include('applications.company.urls')),
     path('api/v1/chat/', include('applications.messagesandchat.urls')),
+    path('api/v1/map/', include('applications.map.urls')),
+    path('api/v1/statisticsdriver/', include('applications.statisticsdriver.urls')),
     path('api/v1/', include('applications.driver.urls')),
     path('swagger/', schema_view.with_ui('swagger')),
 

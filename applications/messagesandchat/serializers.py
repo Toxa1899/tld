@@ -9,9 +9,6 @@ class ChatSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         request = self.context.get('request')
         user = request.user
-        print('zx--------------------')
-        print(user)
-        print(user.id,'----')
         validated_data['my_id'] = user.id
         return Chat.objects.create(**validated_data)
 
@@ -24,5 +21,3 @@ class MessageSerializer(serializers.ModelSerializer):
         model = Message
         fields = '__all__'
 
-    def validate(self, attrs):
-        pass

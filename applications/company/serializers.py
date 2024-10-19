@@ -12,14 +12,14 @@ User = get_user_model()
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        exclude = ['user']  # Исключаем поле user
+        exclude = ['user']
 
     def create(self, validated_data):
         request = self.context.get('request')
         user = request.user
         import uuid
 
-        validated_data['user'] = user  # Добавляем пользователя вручную
+        validated_data['user'] = user
         validated_data['activation_code'] = str(uuid.uuid4())
 
 
@@ -52,7 +52,7 @@ class CompanyGetSerializer(serializers.ModelSerializer):
 class UserGetSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id",'first_name', 'last_name', 'email', 'phone']
+        fields = ["id",'first_name', 'last_name', 'email', 'phone', 'is_driver']
 
 
 class CompanyUserGetSerializer(serializers.ModelSerializer):

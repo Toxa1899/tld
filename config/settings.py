@@ -41,12 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
     
     # apps
     'applications.account',
     'applications.company',
     'applications.messagesandchat',
     'applications.driver',
+    'applications.map',
+    'applications.statisticsdriver',
     
     # libraries
     'rest_framework',

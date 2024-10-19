@@ -1,6 +1,10 @@
+from logging import NullHandler
+
 from django.contrib.auth.hashers import make_password
 from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager
+
+
 
 
 class CustomUserManager(UserManager):
@@ -158,6 +162,8 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=18)
     company = models.CharField(max_length=80, blank=True, null=True)
+    # company = models.ForeignKey(Company,blank=True, null=True, on_delete=models.CASCADE)
+
     usdot = models.IntegerField(blank=True, null=True)
     number_employees = models.IntegerField(blank=True, null=True)
     activation_code = models.CharField(max_length=60, blank=True)
@@ -169,7 +175,7 @@ class CustomUser(AbstractUser):
                                                      verbose_name="Driver's License Issuing State*",
                                                      choices=DRIVERS_LICENSE_ISSUING_STATE_CHOICES)
     home_terminal_address = models.CharField(max_length=100, blank=True, null=True,
-                                             verbose_name="Home Terminal Address"),
+                                             verbose_name="Home Terminal Address")
     co_driver = models.CharField(max_length=100, blank=True, null=True, verbose_name="co_driver")
     colors = models.CharField(max_length=50, verbose_name="Colors", blank=True, null=True, choices=COLORS)
     address1 = models.CharField(max_length=125, blank=True, null=True, verbose_name="address1")
@@ -177,7 +183,7 @@ class CustomUser(AbstractUser):
     city = models.CharField(max_length=50, blank=True, null=True, verbose_name="city")
     state = models.CharField(max_length=50, blank=True, null=True, verbose_name="State")
     postal_code = models.CharField(max_length=50, blank=True, null=True, verbose_name="Zip")
-    notes = models.TextField(verbose_name='Notes')
+    notes = models.TextField(verbose_name='Notes', blank=True, null=True)
     allow_personal_conveyance = models.BooleanField(default=False, verbose_name='Allow Personal Conveyance')
     allow_yard_move = models.BooleanField(default=False, verbose_name='Allow Yard Move')
     is_driver = models.BooleanField(default=False)
