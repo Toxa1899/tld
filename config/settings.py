@@ -162,7 +162,8 @@ AUTH_USER_MODEL = 'account.CustomUser'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://34.173.171.20'
+    'http://34.173.171.20',
+    'https://vue-wi.netlify.app'
 ]
 
 
